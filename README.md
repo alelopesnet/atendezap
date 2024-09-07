@@ -11,7 +11,7 @@
 01. Informações Importantes
 02. Link do GitHub
 03. Dados do Servidor e da Instalação
-04. Atualizar o Servidor e Reiniciar - Passo 01
+04. Atualizar o Servidor e Reiniciar | Instalar Docker-cli - Passo 01
 05. Instalador do Whaticket - Passo 02
 06. Processo de instalação no terminal ssh - Passo 03
 07. Fix nginx.conf
@@ -87,6 +87,32 @@ sudo apt -y update && apt -y upgrade
 
 Reinicie o servidor para concluir as atualizações:
 reboot
+
+# Instalar Docker-cli
+
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+# Instalar a ultima versao e executando:
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# Iniciando o Docker
+sudo service docker start
+
+# Verificar se o Docker Engine foi instalado corretamente:
+sudo docker run hello-world
+
 
 =======================================================================================================================================================================
 
