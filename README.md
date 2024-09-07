@@ -228,19 +228,6 @@ frontend\src\pages\Chat\ChatList.js
 cd /frontend npm run build
 
 ===================================================================================================================================================== 
-##  Habilitar envio de 2ª Via de Boletos Asaas (Não confundir com cobrança de Planos Saas):
-
-Obter sua chave api no site da Asaas e inseri-lo no campo em configurações;
-
-Criar um fila de atendimento:
-
-Nome: 2ª Via de Boleto
-
-Mensagem de Saudação:
-
-Por favor nos forneça o CPF/CNPJ para consultarmos na nossa base de dados
-
-===================================================================================================================================================== 
 
 ##  Acesso ao PostgreSQL:
 
@@ -276,7 +263,6 @@ Após confirmar que você é capaz de executar comandos no cliente Redis depois 
 quit
 ======================================================================================================================================================== 
 
-=======================================================================================================================================================================
 
 ## 11. Instalação no Ubuntu 22
 Incapaz de criar o usuário deploy, criar manualmente antes da instalação.
