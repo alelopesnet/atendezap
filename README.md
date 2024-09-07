@@ -301,7 +301,7 @@ Baixe o instalador:
 
 cd /home
 ls
-sudo apt install -y git && git clone https://github.com/gilderlanlima/instalador.git instalador && sudo chmod -R 777 instalador  && cd instalador  && sudo ./install_primaria
+sudo apt install -y git && git clone https://github.com/alelopesnet/instalador.git instalador && sudo chmod -R 777 instalador  && cd instalador  && sudo ./install_primaria
 
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
